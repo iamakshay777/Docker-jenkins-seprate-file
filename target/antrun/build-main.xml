@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <unzip src="/home/akshay/Downloads/mvn-testing-spring-boot-project/spring-boot-hello-world/target/spring-boot-hello-1.0.jar" dest="/home/akshay/Downloads/mvn-testing-spring-boot-project/spring-boot-hello-world/target/spring-boot-hello-1.0"/>
+  <copy todir="/home/akshay/Downloads/mvn-testing-spring-boot-project/spring-boot-hello-world/target/spring-boot-hello-1.0/" overwrite="false">
+    <fileset includes=".ebextensions/**" dir="./"/>
+  </copy>
+  <zip basedir="/home/akshay/Downloads/mvn-testing-spring-boot-project/spring-boot-hello-world/target/spring-boot-hello-1.0" destfile="/home/akshay/Downloads/mvn-testing-spring-boot-project/spring-boot-hello-world/target/spring-boot-hello-1.0.jar" compress="false"/>
+</target>
+</project>
