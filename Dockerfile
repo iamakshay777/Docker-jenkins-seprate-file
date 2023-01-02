@@ -10,4 +10,4 @@ RUN echo 'java -Dserver.port=8888 -jar spring-boot-hello-1.0.jar' > /usr/local/t
 
 EXPOSE 8888
 
-CMD /usr/local/tomcat/webapps/start.sh
+CMD ["sh","/usr/local/tomcat/webapps/start.sh"]
