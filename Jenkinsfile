@@ -36,7 +36,7 @@ pipeline{
              sh '''
              sudo docker build -t webimage:$BUILD_NUMBER .
              sudo docker container run -itd --name webserver$BUILD_NUMBER -p 8888 --entrypoint=/bin/bash webimage:$BUILD_NUMBER
-             cd /usr/local/tomcat/webapps && sh start.sh '''
+             docker ps '''
          }
       }
     }
