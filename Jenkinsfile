@@ -35,7 +35,7 @@ pipeline{
          script {
              sh '''
              sudo docker build -t webimage:$BUILD_NUMBER .
-             sudo docker container run -itd --name webserver$BUILD_NUMBER -p 8888  webimage:$BUILD_NUMBER
+             sudo docker container run -dp 8888:8888 --name webserver$BUILD_NUMBER  webimage:$BUILD_NUMBER
              docker ps '''
          }
       }
